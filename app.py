@@ -4,7 +4,7 @@ from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline
 app = Flask(__name__)
 
 # Load the pre-trained model and tokenizer
-model_name = "deepset/tinyroberta-squad2"
+model_name = "deepset/roberta-base-squad2"
 nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)
 
 @app.route('/ask', methods=['POST'])
